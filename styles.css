@@ -131,7 +131,7 @@ nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://source.unsplash.com/random/1600x900/?education') no-repeat center center/cover;
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('./img/clase_crece.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
