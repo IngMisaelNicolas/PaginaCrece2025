@@ -494,6 +494,8 @@ footer {
 @media (max-width: 768px) {
     .mobile-menu {
         display: block;
+        position: relative;
+        left: 100px;
     }
     
     nav ul {
@@ -512,6 +514,7 @@ footer {
     
     nav ul.active {
         left: 0;
+        top: 100px;
     }
     
     nav ul li {
