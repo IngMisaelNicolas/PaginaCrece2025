@@ -1,10 +1,13 @@
+/* Importar fuente Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 /* Estilos generales */
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
+    --primary-color: #275A99; /* Azul principal */
+    --secondary-color: #F6BE2B; /* Amarillo acento */
     --accent-color: #e74c3c;
-    --light-color: #ecf0f1;
-    --dark-color: #2c3e50;
+    --light-color: #f8f9fa;
+    --dark-color: #1a3a5f;
     --text-color: #333;
     --text-light: #fff;
 }
@@ -13,7 +16,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Cambio a fuente Roboto */
 }
 
 body {
@@ -52,14 +55,14 @@ section {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color); /* Línea amarilla debajo de títulos */
 }
 
 .btn {
     display: inline-block;
     padding: 12px 30px;
-    background-color: var(--secondary-color);
-    color: white;
+    background-color: var(--secondary-color); /* Botones amarillos */
+    color: var(--dark-color); /* Texto oscuro para mejor contraste */
     text-decoration: none;
     border-radius: 5px;
     font-weight: 600;
@@ -69,14 +72,15 @@ section {
 }
 
 .btn:hover {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Azul al hacer hover */
+    color: white;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Header */
 header {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Azul en el header */
     color: var(--text-light);
     padding: 20px 0;
     position: fixed;
@@ -100,7 +104,7 @@ header {
 }
 
 .logo span {
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Detalles amarillos en el logo */
 }
 
 nav ul {
@@ -120,18 +124,19 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Enlaces amarillos al hacer hover */
 }
 
 .mobile-menu {
     display: none;
     font-size: 1.5rem;
     cursor: pointer;
+    color: var(--secondary-color); /* Menú móvil amarillo */
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('./img/clase_crece.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(39, 90, 153, 0.7), rgba(39, 90, 153, 0.7)), url('./img/clase_crece.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -173,7 +178,7 @@ nav ul li a:hover {
 .about-text h3 {
     font-size: 1.8rem;
     margin-bottom: 20px;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Títulos en azul */
 }
 
 .about-text p {
@@ -207,6 +212,7 @@ nav ul li a:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    border-top: 4px solid var(--secondary-color); /* Borde superior amarillo */
 }
 
 .service-card:hover {
@@ -216,7 +222,7 @@ nav ul li a:hover {
 
 .service-icon {
     font-size: 3rem;
-    color: var(--secondary-color);
+    color: var(--primary-color); /* Iconos en azul */
     margin-bottom: 20px;
 }
 
@@ -243,6 +249,7 @@ nav ul li a:hover {
     overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
+    border-top: 4px solid var(--primary-color); /* Borde superior azul */
 }
 
 .course-card:hover {
@@ -297,6 +304,7 @@ nav ul li a:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     text-align: center;
     margin: 0 20px;
+    border-left: 4px solid var(--secondary-color); /* Borde lateral amarillo */
 }
 
 .testimonial-text {
@@ -360,7 +368,7 @@ nav ul li a:hover {
 
 .contact-icon {
     font-size: 1.5rem;
-    color: var(--secondary-color);
+    color: var(--primary-color); /* Iconos de contacto en azul */
     margin-right: 15px;
 }
 
@@ -394,7 +402,7 @@ textarea.form-control {
 
 /* Footer */
 footer {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color); /* Footer azul */
     color: var(--text-light);
     padding: 60px 0 20px;
 }
@@ -420,7 +428,7 @@ footer {
     left: 0;
     width: 50px;
     height: 2px;
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color); /* Línea amarilla en títulos del footer */
 }
 
 .footer-col ul {
@@ -438,7 +446,7 @@ footer {
 }
 
 .footer-col ul li a:hover {
-    color: var(--secondary-color);
+    color: var(--secondary-color); /* Enlaces amarillos al hacer hover */
 }
 
 .social-links {
@@ -460,7 +468,7 @@ footer {
 }
 
 .social-links a:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--secondary-color); /* Iconos sociales amarillos al hacer hover */
     transform: translateY(-3px);
 }
 
