@@ -80,7 +80,7 @@ section {
 
 /* Header */
 header {
-    background-color: var(--primary-color); /* Azul en el header */
+    background-color: #ffff; /* Azul en el header */
     color: var(--text-light);
     padding: 20px 0;
     position: fixed;
@@ -117,7 +117,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: var(--text-light);
+    color: #000;
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s ease;
