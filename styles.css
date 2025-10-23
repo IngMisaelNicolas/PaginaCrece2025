@@ -480,6 +480,136 @@ footer {
     color: #ddd;
 }
 
+/* Estilos para el botón de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-button:hover {
+    background-color: #128C7E;
+    transform: scale(1.1);
+}
+
+ /* Estilos mejorados para el botón de subir */
+.scroll-to-top {
+    position: fixed;
+    bottom: 90px;
+    right: 22px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,123,255,0.4);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    animation: bounceIn 0.6s ease;
+}
+
+.scroll-to-top:hover {
+    background: linear-gradient(135deg, #0056b3, #004494);
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 6px 20px rgba(0,123,255,0.6);
+}
+
+.scroll-to-top:active {
+    transform: translateY(-1px) scale(1.05);
+}
+
+/* Tooltip */
+.scroll-to-top::after {
+    content: "Subir al inicio";
+    position: absolute;
+    bottom: 70px;
+    right: 50%;
+    transform: translateX(50%);
+    background: #333;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.scroll-to-top::before {
+    content: "";
+    position: absolute;
+    bottom: 65px;
+    right: 50%;
+    transform: translateX(50%);
+    border: 5px solid transparent;
+    border-top-color: #333;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.scroll-to-top:hover::after,
+.scroll-to-top:hover::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .scroll-to-top {
+        bottom: 90px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        font-size: 20px;
+    }
+}
+
 /* Responsive */
 @media (max-width: 992px) {
     .about-content, .contact-container {

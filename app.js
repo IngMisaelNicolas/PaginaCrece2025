@@ -41,3 +41,30 @@ document.querySelector('.footer-col form').addEventListener('submit', function(e
     alert('¡Gracias por suscribirte! Recibirás nuestras novedades pronto.');
     this.reset();
 });
+
+function openWhatsApp() {
+            // Reemplaza con tu número de WhatsApp (sin +, espacios o guiones)
+            const phoneNumber = "5545531838";
+            const message = "Hola, me interesa conocer más sobre sus servicios";
+            
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+}
+
+// Mostrar/ocultar botón al hacer scroll
+window.addEventListener('scroll', function() {
+    const scrollButton = document.getElementById('scrollToTop');
+    if (window.pageYOffset > 300) {
+        scrollButton.classList.add('show');
+    } else {
+        scrollButton.classList.remove('show');
+    }
+});
+
+        // Función para subir al inicio
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // Desplazamiento suave
+    });
+}
