@@ -504,7 +504,7 @@ footer {
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: var(--primary-color);
+        background-color: #f6be2b;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
