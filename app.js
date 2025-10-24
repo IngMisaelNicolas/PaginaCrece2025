@@ -68,3 +68,18 @@ function scrollToTop() {
         behavior: 'smooth' // Desplazamiento suave
     });
 }
+
+let index = 0;
+const carousel = document.querySelector(".carousel");
+const testimonials = document.querySelectorAll(".carousel .testimonial");
+
+function showSlide(i) {
+    index = (i + testimonials.length) % testimonials.length;
+    carousel.style.transform = `translateX(${-index * 100}%)`;
+}
+
+document.querySelector(".next").addEventListener("click", () => showSlide(index + 1));
+document.querySelector(".prev").addEventListener("click", () => showSlide(index - 1));
+
+// Auto-rotación cada 5 segundos
+setInterval(() => showSlide(index + 1), 5000);

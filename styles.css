@@ -659,3 +659,59 @@ footer {
         font-size: 2rem;
     }
 }
+
+.testimonials{
+    overflow:hidden;
+}
+
+.testimonials-track {
+    display: flex;
+    width: fit-content;
+    animation: scroll 30s linear infinite;
+}
+
+.testimonial {
+    min-width: 100%;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    border-left: 4px solid var(--secondary-color);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    text-align: center;
+    margin-right: 30px; /* separador suave */
+}
+
+.testimonial p {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
+.testimonial h4 {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-300%); } /* depende del # de tarjetas originales */
+}
+
+
+/* Botón especial para Plataforma */
+.menu-plataforma {
+    background-color: var(--secondary-color);
+    padding: 10px 18px;
+    border-radius: 6px;
+    color: var(--dark-color) !important;
+    font-weight: 600;
+    border: 2px solid var(--secondary-color);
+    transition: 0.3s ease;
+}
+
+.menu-plataforma:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white !important;
+    transform: translateY(-3px);
+}
